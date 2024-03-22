@@ -33,8 +33,8 @@ def create_browser() -> Chrome:
 def main():
     try:
         browser = create_browser()
-        time.sleep(10)
-        browser.quit()
+        while True:
+            time.sleep(1)
     except:
         traceback.print_exc()
 
