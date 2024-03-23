@@ -1,5 +1,4 @@
 import os
-import time
 import traceback
 from pathlib import Path
 
@@ -9,7 +8,6 @@ from selenium.webdriver import Chrome
 CUR_DIR = Path(__file__).parent.absolute()
 USER_DATA_DIR = os.path.join(CUR_DIR, "profile")
 
-HOME_URL = "https://web.telegram.org/k"
 
 os.chdir(CUR_DIR)
 
@@ -32,7 +30,7 @@ def create_browser() -> Chrome:
     return browser
 
 
-def main():
+async def main():
     try:
         browser = create_browser()
         print(f"[*] please login to https://web.telegram.org")
